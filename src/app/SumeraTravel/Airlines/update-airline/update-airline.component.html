@@ -1,0 +1,95 @@
+<div class="container my-5 border card-body">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit Airlines</h1>
+    <hr>
+        <div class="row card-body">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="UpdateAirLine()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                        [(ngModel)] = "AirlineRequest.id">
+                       </div>
+                       <div class="mb-3">
+                        <label for="code" class="form-label">Code</label>
+                         <input type="text" class="form-control" id="code" name="code" 
+                          [(ngModel)] = "AirlineRequest.code">
+                     </div>
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                         <input type="text" class="form-control" id="name" name="name" 
+                          [(ngModel)] = "AirlineRequest.name">
+                     </div>
+ 
+                       <div class="mb-3">
+                        <label for="shortName" class="form-label">shortName</label>
+                        <input type="text" class="form-control" id="shortName" name="shortName" 
+                         [(ngModel)] = "AirlineRequest.shortName">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="cityRefId" class="form-label">cityRefId</label>
+                        <input type="number" class="form-control" id="cityRefId" name="cityRefId" 
+                         [(ngModel)] = "AirlineRequest.cityRefId">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="pincode" class="form-label">pincode</label>
+                        <input type="number" class="form-control" id="pincode" name="pincode" 
+                         [(ngModel)] = "AirlineRequest.pincode">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="logo" class="form-label">logo</label>
+                        <input type="text" class="form-control" id="logo" name="logo" 
+                         [(ngModel)] = "AirlineRequest.logo">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="address1" class="form-label">address1</label>
+                        <input type="text" class="form-control" id="address1" name="address1" 
+                         [(ngModel)] = "AirlineRequest.address1">
+                       </div>
+                       
+                       <div class="mb-3">
+                        <label for="address2" class="form-label">address2</label>
+                        <input type="text" class="form-control" id="address2" name="address2" 
+                         [(ngModel)] = "AirlineRequest.address2">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="address3" class="form-label">address3</label>
+                        <input type="text" class="form-control" id="address3" name="address3" 
+                         [(ngModel)] = "AirlineRequest.address3">
+                       </div>
+                      
+                       <div class="mb-3">
+                        <label for="telephone" class="form-label">telephone</label>
+                        <input type="text" class="form-control" id="telephone" name="telephone" 
+                         [(ngModel)] = "AirlineRequest.telephone">
+                       </div>
+                       <div class="mb-3">
+                        <label for="telephone2" class="form-label">telephone2</label>
+                        <input type="text" class="form-control" id="telephone2" name="telephone2" 
+                         [(ngModel)] = "AirlineRequest.telephone2">
+                       </div>
+                       <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" 
+                         [(ngModel)] = "AirlineRequest.email">
+                       </div>
+                       <div class="mb-3">
+                        <label for="email2" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email2" name="email2" 
+                         [(ngModel)] = "AirlineRequest.email2">
+                       </div>        
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteAirline(AirlineRequest.id)">Delete</button>    
+                       </form>          
+                   </div>
+            <div class="col-6">
+                <img class="w-100 h-100 card-body border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJun1WhCgpEXwPClhPU_0lRlRC-RYMhGK1WA&usqp=CAU">
+            </div>
+        </div>
+    </div>
+ 

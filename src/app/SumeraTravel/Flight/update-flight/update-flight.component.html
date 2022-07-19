@@ -1,0 +1,52 @@
+<div class="container my-5 border card-body">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit Flight</h1>
+    <hr>
+        <div class="row card-body">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="UpdateFlight()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                        [(ngModel)] = "flightRequest.id">
+                       </div>
+                      <div class="mb-3">
+                        <label for="code" class="form-label">code</label>
+                         <input type="text" class="form-control" id="code" name="code" 
+                          [(ngModel)] = "flightRequest.code">
+                     </div>
+ 
+                       <div class="mb-3">
+                        <label for="fromAirPortRefId" class="form-label">FromAirPortRefId</label>
+                        <input type="number" class="form-control" id="fromAirPortRefId" name="fromAirPortRefId" 
+                         [(ngModel)] = "flightRequest.fromAirPortRefId">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="toAirPortRefId" class="form-label">ToAirPortRefId</label>
+                        <input type="number" class="form-control" id="toAirPortRefId" name="toAirPortRefId" 
+                         [(ngModel)] = "flightRequest.toAirPortRefId">
+                       </div>
+
+                       <div class="mb-3">
+                        <label for="telephone" class="form-label">Telephone</label>
+                        <input type="text" class="form-control" id="telephone" name="telephone" 
+                         [(ngModel)] = "flightRequest.telephone">
+                       </div>
+                       <div class="mb-3">
+                        <label for="telephone2" class="form-label">Telephone2</label>
+                        <input type="text" class="form-control" id="telephone2" name="telephone2" 
+                         [(ngModel)] = "flightRequest.telephone2">
+                       </div>
+
+                                  
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="Deleteflight(flightRequest.id)">Delete</button>    
+                       </form>          
+                   </div>
+            <div class="col-6">
+                <img class="w-100 h-100 card-body border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJun1WhCgpEXwPClhPU_0lRlRC-RYMhGK1WA&usqp=CAU">
+            </div>
+        </div>
+    </div>
+ 

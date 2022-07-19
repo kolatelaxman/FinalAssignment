@@ -1,0 +1,168 @@
+
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav>   
+
+
+<div class="container my-5 card card-body border bg-light">
+    <h1 class="mb-3 text-center text-white bg-dark">Edit Counrty</h1>
+    <hr>
+        <div class="row  ">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="UpdateCity()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                            [(ngModel)] = "cityDetails.id">
+                       </div>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" 
+                          [(ngModel)] = "cityDetails.name">
+                     </div>
+                     <div class="mb-3">
+                        <label for="CountryRefId" class="form-label">CountryRefId</label>
+                        <input type="number" class="form-control" id="CountryRefId" name="CountryRefId" 
+                          [(ngModel)] = "cityDetails.countryRefId" >
+                       </div>                
+                     <button type="submit" class="btn btn-primary mr-5">Save</button>
+                     <button type="button" class="btn btn-danger m-2    " 
+                     (click)="DeleteCity(cityDetails.id)">Delete</button> 
+                   </form>          
+            </div>      
+            <div class="col-6">
+                <img class="w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNdgFBZ9L8J7tzCqq8kPUMh9M6W1rz_KF-Hg&usqp=CAU" alt="">
+            </div>
+        </div>
+</div>
+ 
+<section class="">
+    <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Images -->
+          <section class="">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Images -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+         </div>
+        <!-- Copyright -->
+      </footer>
+
+</section>
+ </div>

@@ -1,0 +1,88 @@
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav>   
+
+<div class="container my-5 border card-body bg-light">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit Room</h1>
+    <hr>
+        <div class="row card-body">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="UpdateHolidayBooking()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                        [(ngModel)] = "addHolidayBookingrequst.id">
+                       </div>
+                      <div class="mb-3">
+                        <label for="holidayPakageId" class="form-label">HolidayPakageId</label>
+                         <input type="number" class="form-control" id="holidayPakageId" name="holidayPakageId" 
+                          [(ngModel)] = "addHolidayBookingrequst.holidayPakageId">
+                     </div>
+                     <div class="mb-3">
+                        <label for="userId" class="form-label">userId</label>
+                         <input type="number" class="form-control" id="userId" name="userId" 
+                          [(ngModel)] = "addHolidayBookingrequst.userId">
+                     </div>
+                     <div class="mb-3">
+                        <label for="bookingDate" class="form-label">BookingDate</label>
+                         <input type="text" class="form-control" id="bookingDate" name="bookingDate" 
+                          [(ngModel)] = "addHolidayBookingrequst.bookingDate">
+                     </div>
+     
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteLocation(addHolidayBookingrequst.id)">Delete</button>    
+                       </form>          
+                   </div>
+             <div class="col-6">
+                <img class="w-100 h-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNulW0nJ2bzUGjvZgxf_aWjV2rBd3mSR0VjQ&usqp=CAU">
+            </div>
+        </div>
+    </div>
+    <footer class=" text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4 text-white">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Footer text</h5>
+      
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                aliquam voluptatem veniam, est atque cumque eum delectus sint!
+              </p>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Footer text</h5>
+      
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                aliquam voluptatem veniam, est atque cumque eum delectus sint!
+              </p>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+     </div>

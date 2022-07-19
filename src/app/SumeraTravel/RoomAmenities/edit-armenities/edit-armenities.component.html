@@ -1,0 +1,37 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit hotel</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="UpdateHotelAmenities()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                            [(ngModel)] = "addhotelAmenitiesRequest.id">
+                       </div>
+                    <div class="mb-3">
+                      <label for="hotelRefId" class="form-label">amenitieRefId</label>
+                      <input type="number" class="form-control" id="name" name="hotelRefId" 
+                          [(ngModel)] = "addhotelAmenitiesRequest.amenitieRefId">
+                     </div>
+
+                     <div class="mb-3">
+                        <label for="amenitieRefId" class="form-label">amenitieRefId</label>
+                        <input type="number" class="form-control" id="amenitieRefId" name="amenitieRefId" 
+                            [(ngModel)] = "addhotelAmenitiesRequest.amenitieRefId">
+                       </div>
+                       
+                                  
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteHotelAmenities(addhotelAmenitiesRequest.id)">Delete</button>    
+                   </form>          
+            </div>
+            <div class="col-6 card-body border m-3">
+                <img class="w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNulW0nJ2bzUGjvZgxf_aWjV2rBd3mSR0VjQ&usqp=CAU">
+            </div>
+        </div>
+</div>
+ 
+
+ 

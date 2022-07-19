@@ -1,0 +1,42 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit Flight-Travel</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="UpdateFlight()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                            [(ngModel)] = "flightTravel.id">
+                       </div>
+                    <div class="mb-3">
+                      <label for="flightRefId" class="form-label">flightRefId</label>
+                      <input type="number" class="form-control" id="flightRefId" name="flightRefId" 
+                          [(ngModel)] = "flightTravel.flightRefId">
+                     </div>
+                 
+                    <div class="mb-3">
+                      <label for="travelClassRefId" class="form-label">TravelClassRefId</label>
+                      <input type="number" class="form-control" id="travelClassRefId" name="travelClassRefId" 
+                          [(ngModel)] = "flightTravel.travelClassRefId">
+                     </div>
+                     
+                    <div class="mb-3">
+                        <label for="rent" class="form-label">Rent</label>
+                        <input type="number" class="form-control" id="rent" name="rent" 
+                            [(ngModel)] = "flightTravel.rent">
+                       </div>  
+
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteFlight(flightTravel.id)">Delete</button>    
+                   </form>          
+            </div>
+            <div class="col-6 card-body border m-3">
+                <img class="w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtoZu2E6m7BQToLCgQ91iUWI4fMUZITZj0tA&usqp=CAU">
+            </div>
+        </div>
+</div>
+ 
+
+ 

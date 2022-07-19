@@ -1,0 +1,38 @@
+<div class="container my-5 border card-body">
+    <h1 class="mb-3 text-center bg-dark text-white">Flightbooking</h1>
+    <hr>
+   <a class="text-white btn btn-primary" [routerLink]="['/add-FlightBooking']">Add Flightbooking</a>  
+   <hr>
+    <table class="table m-2 card-body border" *ngIf="flightbooking">
+       <thead>
+            <tr class="bg-info">
+               <th>Id</th>
+               <th>UserRefId</th>       
+               <th>BookingDate</th>
+               <th>FlightScheduleId</th>
+               <th>ContacNumber</th>
+               <th>ContactEmail</th>
+               <th>NumberOfTicket</th>
+               <th>TotalAmount</th>
+               <th>Update</th>
+               <th>Delete</th>
+             </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let flights of flightbooking">
+               <td>{{flights.id}}</td>
+               <td>{{flights.userRefId}}</td>
+               <td>{{flights.bookingDate}}</td>
+               <td>{{flights.flightScheduleId}}</td>
+               <td>{{flights.contactNumber}}</td>
+               <td>{{flights.contactEmail}}</td>
+               <td>{{flights.numberOfTicket}}</td>
+               <td>{{flights.totalAmount}}</td>
+               <td><a [routerLink]="['/app','FlightBooking', flights.id]" class="btn btn-primary">Edits</a></td>
+               <td><a [routerLink]="['/app','FlightBooking', flights.id]" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </tbody>                                                         
+    </table>
+    <p *ngIf="!flightbooking">No Countrys Found </p>
+</div>
+

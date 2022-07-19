@@ -1,0 +1,163 @@
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav> 
+<div class="container my-5 card card-body border bg-light">
+    <h1 class="mb-3 text-center text-white bg-dark">Add New Counrty</h1>
+    <hr>
+        <div class="row">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="AddCounrty()">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" 
+                          [(ngModel)] = "addcounrtyRequest.name">
+                     </div>
+                     <div class="mb-3">
+                        <label for="code" class="form-label">code</label>
+                        <input type="text" class="form-control" id="code" name="code" 
+                          [(ngModel)] = "addcounrtyRequest.code" >
+                       </div>                
+                     <button type="submit" class="btn btn-primary">Save</button>
+                     <button type="reset" class="btn btn-danger m-2" value="Reset">Reset</button>
+
+                  </form>          
+            </div>
+            <div class="col-6 card-body border">
+                <img class="w-100 h-100 " src="https://www.rd.com/wp-content/uploads/2019/09/holding-globe-e1567706501433.jpg">
+            </div>
+
+            <div class="col-12 container mt-5">
+             <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30710983.209769644!2d64.45235976587381!3d20.01273993518969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1656825866241!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+</div>
+ 
+<section class="">
+    <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Images -->
+          <section class="">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                  data-ripple-color="light"
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+                    class="w-100"
+                  />
+                  <a href="#!">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.2);"
+                    ></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Images -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+         </div>
+        <!-- Copyright -->
+      </footer>
+
+</section>
+ </div>

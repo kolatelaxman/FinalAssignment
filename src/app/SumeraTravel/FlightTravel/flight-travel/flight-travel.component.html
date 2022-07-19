@@ -1,0 +1,31 @@
+<div class="container my-5 border card-body">
+    <h1 class="mb-3 text-center bg-dark text-white">FlightTravel</h1>
+    <hr>
+   <a class="text-white btn btn-primary" [routerLink]="['/add-FlightTravel']">Add FlightTravel</a>  
+   <hr>
+    <table class="table m-2 card-body border" *ngIf="flightTravel">
+       <thead>
+            <tr class="bg-info">
+               <th>Id</th>
+               <th>FlightRefId</th>       
+               <th>TravelclassRefId</th>
+               <th>Rent</th>
+               <th>Update</th>
+               <th>Delete</th>
+             </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let flights of flightTravel">
+               <td>{{flights.id}}</td>
+               <td>{{flights.flightRefId}}</td>
+               <td>{{flights.travelClassRefId}}</td>
+               <td>{{flights.rent}}</td>
+
+               <td><a [routerLink]="['/app','FlightTravel', flights.id]" class="btn btn-primary">Edits</a></td>
+               <td><a [routerLink]="['/app','FlightTravel', flights.id]" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </tbody>                                                         
+    </table>
+    <p *ngIf="!flightTravel">No Countrys Found </p>
+</div>
+

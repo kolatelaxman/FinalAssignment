@@ -1,0 +1,43 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center text-white bg-dark border">Add New Flight</h1>
+    <hr>  
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="AddFlight()">
+                    <div class="mb-3">
+                      <label for="code" class="form-label">Code</label>
+                      <input type="text" class="form-control" id="code" name="code" 
+                          [(ngModel)] = "flightRequest.code">
+                     </div>
+                     <div class="mb-3">
+                        <label for="fromAirPortRefId" class="form-label">FromAirPortRefId</label>
+                        <input type="number" class="form-control" id="fromAirPortRefId" name="fromAirPortRefId" 
+                          [(ngModel)] = "flightRequest.fromAirPortRefId" >
+                       </div> 
+                       <div class="mb-3">
+                        <label for="toAirPortRefId" class="form-label">ToAirPortRefId</label>
+                        <input type="number" class="form-control" id="toAirPortRefId" name="toAirPortRefId" 
+                          [(ngModel)] = "flightRequest.toAirPortRefId" >
+                       </div> 
+                       <div class="mb-3">
+                        <label for="telephone" class="form-label">Telephone</label>
+                        <input type="text   " class="form-control" id="telephone" name="telephone" 
+                          [(ngModel)] = "flightRequest.telephone">
+                       </div>        
+                       <div class="mb-3">
+                        <label for="telephone2" class="form-label">Telephone2</label>
+                        <textarea name="description" id="telephone2" cols="50" rows="2" class="form-control" 
+                          [(ngModel)] = "flightRequest.telephone2"></textarea>
+                        <!-- <input type="text" class="form-control" id="description" name="description" 
+                          [(ngModel)] = "addhotelRequest.description"> -->
+                       </div>             
+                     <button type="submit" class="btn btn-danger">Save</button>
+                     <button type="reset" class="btn btn-primary m-2"  value="Reset">Reset</button>
+                  </form>           
+            </div>
+            <div class="col-6">
+              <img class="w-100 h-100 card-body border m-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQkKzckiGrZSQbgqLLzEScpwEhHn9WWBqUIQ&usqp=CAU" alt="">
+            </div>
+        </div>
+</div>
+ 

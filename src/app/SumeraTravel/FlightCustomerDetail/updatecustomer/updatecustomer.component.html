@@ -1,0 +1,52 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit FlightCustemar</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="UpdateFlightbooking()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                            [(ngModel)] = "flightCustomer.id">
+                       </div>
+                    <div class="mb-3">
+                      <label for="firstName" class="form-label">FirstName</label>
+                      <input type="text" class="form-control" id="firstName" name="firstName" 
+                          [(ngModel)] = "flightCustomer.firstName">
+                     </div>
+                 
+                    <div class="mb-3">
+                      <label for="lastName" class="form-label">LastName</label>
+                      <input type="text" class="form-control" id="lastName" name="lastName" 
+                          [(ngModel)] = "flightCustomer.lastName">
+                     </div>
+                     
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" name="age" 
+                            [(ngModel)] = "flightCustomer.age">
+                    </div>  
+                       <div class="mb-3">
+                        <label for="flightBookingId" class="form-label">FlightBookingId</label>
+                        <input type="number" class="form-control" id="flightBookingId" name="flightBookingId" 
+                            [(ngModel)] = "flightCustomer.flightBookingId">
+                       </div>  
+                       <div class="mb-3">
+                        <label for="userRefId" class="form-label">FlightBookingId</label>
+                        <input type="number" class="form-control" id="userRefId" name="userRefId" 
+                            [(ngModel)] = "flightCustomer.userRefId">
+                       </div>   
+
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteFlightbooking(flightCustomer.id)">Delete</button>    
+                   </form>          
+            </div>
+            <div class="col-6 card-body border m-3">
+                <img class="w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtoZu2E6m7BQToLCgQ91iUWI4fMUZITZj0tA&usqp=CAU">
+            </div>
+        </div>
+</div>
+ 
+
+ 

@@ -1,0 +1,28 @@
+<div class="container my-5 card-body border ">
+    <h1 class="mb-3 text-center bg-dark text-white">HotelAmenities</h1>
+    <hr>
+   <a class="text-white btn btn-primary" [routerLink]="['/add-HotelAmenities']">Add Rooms</a>  
+   <hr>
+    <table class="table m-2 card-body border" *ngIf="hotels">
+       <thead>
+            <tr class="bg-info">
+               <th>Id</th>
+               <th>HotelRefId</th>
+               <th>AmenitieRefId</th>
+               <th>Update</th>
+               <th>Delete</th>
+               </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let hotel of hotels">
+               <td>{{hotel.id}}</td>
+               <td>{{hotel.hotelRefId}}</td>
+               <td>{{hotel.amenitieRefId}}</td>
+               <td><a [routerLink]="['/app','HotelAmenities', hotel.id]" class="btn btn-primary">Edits</a></td>
+               <td><a [routerLink]="['/app','HotelAmenities', hotel.id]" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </tbody>                                                         
+    </table>
+    <p *ngIf="!hotels">No Countrys Found </p>
+</div>
+

@@ -1,0 +1,77 @@
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav>  
+<div class="container my-5 border card card-body bg-light">
+    <h1 class="mb-3 text-center bg-dark border text-white">Add New HolidayPackage</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-2">
+                <form #form="ngForm" (ngSubmit)="AddHoliday()">
+                    <div class="mb-3">
+                      <label for="from_locationRefId" class="form-label">from_locationRefId</label>
+                      <input type="number" class="form-control" id="from_locationRefId" name="from_locationRefId" 
+                          [(ngModel)] = "addHolidayPackagrditail.from_locationRefId">
+                     </div> 
+                     <div class="mb-3">
+                        <label for="to_locationRefId" class="form-label">to_locationRefId</label>
+                        <input type="number" class="form-control" id="to_locationRefId" name="to_locationRefId" 
+                            [(ngModel)] = "addHolidayPackagrditail.to_locationRefId">
+                       </div> 
+
+                       <div class="mb-3">
+                        <label for="hotel_ref_id" class="form-label">hotel_ref_id</label>
+                        <input type="number" class="form-control" id="hotel_ref_id" name="hotel_ref_id" 
+                            [(ngModel)] = "addHolidayPackagrditail.hotel_ref_id">
+                       </div> 
+                       <div class="mb-3">
+                        <label for="holidaypackagePrice" class="form-label">holidaypackagePrice</label>
+                        <input type="number" class="form-control" id="holidaypackagePrice" name="holidaypackagePrice" 
+                            [(ngModel)] = "addHolidayPackagrditail.holidaypackagePrice">
+                       </div> 
+                       <div class="mb-3">
+                        <label for="image" class="form-label">image</label>
+                        <input type="text" class="form-control" id="image" name="image" 
+                            [(ngModel)] = "addHolidayPackagrditail.image">
+                       </div> 
+                       <div class="mb-3">
+                        <label for="guestNo" class="form-label">guestNo</label>
+                        <input type="number" class="form-control" id="guestNo" name="guestNo" 
+                            [(ngModel)] = "addHolidayPackagrditail.guestNo">
+                       </div> 
+                       <div class="mb-3">
+                        <label for="description" class="form-label">description</label>
+                        <input type="text" class="form-control" id="description" name="description" 
+                            [(ngModel)] = "addHolidayPackagrditail.description">
+                       </div> 
+                       <div class="mb-3">
+                        <label for="dateTime" class="form-label">dateTime</label>
+                        <input type="text" class="form-control" id="dateTime" name="dateTime" 
+                            [(ngModel)] = "addHolidayPackagrditail.dateTime">
+                       </div> 
+                             
+                     <button type="submit" class="btn btn-danger">Save</button>
+                     <button type="reset" class="btn btn-primary m-2"  value="Reset">Reset</button>
+                  </form>           
+            </div>
+            <div class="col-6">
+              <img class="w-100 h-100 card-body border" src="https://i2-prod.mirror.co.uk/incoming/article12813467.ece/ALTERNATES/s1200b/0_booking-flight-travel-traveler-search-reservation-holiday-page.jpg" alt="">
+            </div>
+        </div>
+</div>
+ 
+<footer class=" text-center text-lg-start">
+    
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+ </div>

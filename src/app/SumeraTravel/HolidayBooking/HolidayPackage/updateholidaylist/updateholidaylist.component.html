@@ -1,0 +1,86 @@
+
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav>  
+<div class="container my-5 border card card-body bg-light">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit holidaypackage</h1>
+    <hr>
+        <div class="row card-body">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="UpdateHoliday()">
+                    <div class="mb-3">
+                        <label for="holidaypackageId" class="form-label">holidaypackageId</label>
+                        <input type="number" class="form-control" id="holidaypackageId" name="holidaypackageId"  readonly
+                        [(ngModel)] = "addHolidayPackagrditail.holidaypackageId">
+                       </div>
+                      <div class="mb-3">
+                        <label for="from_locationRefId" class="form-label">from_locationRefId</label>
+                         <input type="number" class="form-control" id="from_locationRefId" name="from_locationRefId" 
+                          [(ngModel)] = "addHolidayPackagrditail.from_locationRefId">
+                     </div>
+                     <div class="mb-3">
+                        <label for="to_locationRefId" class="form-label">from_locationRefId</label>
+                         <input type="number" class="form-control" id="to_locationRefId" name="to_locationRefId" 
+                          [(ngModel)] = "addHolidayPackagrditail.to_locationRefId">
+                     </div>
+                     <div class="mb-3">
+                        <label for="image" class="form-label">image</label>
+                         <input type="text" class="form-control" id="image" name="image" 
+                          [(ngModel)] = "addHolidayPackagrditail.image">
+                     </div>
+                     <div class="mb-3">
+                        <label for="hotel_ref_id" class="form-label">hotel_ref_id</label>
+                         <input type="number" class="form-control" id="hotel_ref_id" name="hotel_ref_id" 
+                          [(ngModel)] = "addHolidayPackagrditail.hotel_ref_id">
+                     </div>
+                     <div class="mb-3">
+                        <label for="holidaypackagePrice" class="form-label">holidaypackagePrice</label>
+                         <input type="number" class="form-control" id="holidaypackagePrice" name="holidaypackagePrice" 
+                          [(ngModel)] = "addHolidayPackagrditail.holidaypackagePrice">
+                     </div>
+                     <div class="mb-3">
+                        <label for="guestNo" class="form-label">guestNo</label>
+                         <input type="number" class="form-control" id="guestNo" name="guestNo" 
+                          [(ngModel)] = "addHolidayPackagrditail.guestNo">
+                     </div>
+                     <div class="mb-3">
+                        <label for="description" class="form-label">description</label>
+                         <input type="text" class="form-control" id="description" name="description" 
+                          [(ngModel)] = "addHolidayPackagrditail.description">
+                     </div>
+                     <div class="mb-3">
+                        <label for="dateTime" class="form-label">dateTime</label>
+                         <input type="text" class="form-control" id="dateTime" name="dateTime" 
+                          [(ngModel)] = "addHolidayPackagrditail.dateTime">
+                     </div>
+     
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteHoliday(addHolidayPackagrditail.holidaypackageId)">Delete</button>    
+                       </form>          
+                   </div>
+            <div class="col-6">
+                <img class="w-100 h-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ZDMD9aoiQkqJcs3jkt49Bw4d58AeEp4fog&usqp=CAU">
+                <img class="w-100 h-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgY-jMrC3fTW97mCEDb2lMVSGnDAX09E3lNw&usqp=CAU">
+
+            </div>
+        </div>
+    </div>
+ 
+    <footer class=" text-center text-lg-start">
+        <!-- Grid container -->
+         
+        <!-- Copyright -->
+        <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+     </div>

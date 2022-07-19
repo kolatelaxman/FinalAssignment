@@ -1,0 +1,45 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit Users</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="UpdateUser()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                            [(ngModel)] = "UserClass.id">
+                       </div>
+                    <div class="mb-3">
+                      <label for="firstName" class="form-label">FirstName</label>
+                      <input type="text" class="form-control" id="firstName" name="firstName" 
+                          [(ngModel)] = "UserClass.firstName">
+                     </div>
+
+                     <div class="mb-3">
+                        <label for="lastName" class="form-label">LastName</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" 
+                            [(ngModel)] = "UserClass.lastName">
+                       </div>
+                       <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" 
+                            [(ngModel)] = "UserClass. email">
+                       </div>
+                       <div class="mb-3">
+                        <label for="cityRefId" class="form-label">CityRefId</label>
+                        <input type="number" class="form-control" id="cityRefId" name="cityRefId" 
+                            [(ngModel)] = "UserClass.cityRefId">
+                       </div>
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteUser(UserClass.id)">Delete</button>    
+                   </form>          
+            </div>
+            <div class="col-6 card-body border m-3">
+                <img class="w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVO8W87IBRDJf0UPVE084vrMQWlv2prA8EyA&usqp=CAU">
+            </div>
+        </div>
+</div>
+ 
+
+ 

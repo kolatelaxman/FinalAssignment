@@ -1,0 +1,36 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Add New HotelAmenities</h1>
+    <hr>
+        <div class="row">
+            <div class="col-6">
+                <form #form="ngForm" (ngSubmit)="AddHotelAmenities()">
+                    <div class="mb-3">
+                      <label for="id" class="form-label">Name</label>
+                      <input type="number" class="form-control" id="id" name="id" 
+                          [(ngModel)] = "addhotelAmenitiesRequest.id">
+                     </div>
+                     <div class="mb-3">
+                        <label for="hotelRefId" class="form-label">hotelRefId</label>
+                        <input type="number" class="form-control" id="hotelRefId" name="hotelRefId" 
+                          [(ngModel)] = "addhotelAmenitiesRequest.hotelRefId" >
+                       </div> 
+                       <div class="mb-3">
+                        <label for="amenitieRefId" class="form-label">amenitieRefId</label>
+                        <input type="number" class="form-control" id="amenitieRefId" name="amenitieRefId" 
+                          [(ngModel)] = "addhotelAmenitiesRequest.amenitieRefId" >
+                       </div> 
+                            
+                     
+                        <!-- <input type="text" class="form-control" id="description" name="description" 
+                          [(ngModel)] = "addhotelRequest.description"> -->
+                                 
+                     <button type="submit" class="btn btn-danger">Save</button>
+                     <button type="reset" class="btn btn-primary m-2"  value="Reset">Reset</button>
+                  </form>           
+            </div>
+            <div class="col-6">
+              <img class="w-100 h-100" src="https://www.prismetric.com/wp-content/uploads/2017/04/Demystify-your-marketing-strategy-the-Make-My-Trip-way-1.jpg" alt="">
+            </div>
+        </div>
+</div>
+ 

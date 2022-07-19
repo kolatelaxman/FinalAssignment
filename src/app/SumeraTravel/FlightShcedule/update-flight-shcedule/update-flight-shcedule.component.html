@@ -1,0 +1,41 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Edit FlightShcedule</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="UpdateFlightshcedule()">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">Id</label>
+                        <input type="number" class="form-control" id="id" name="id"  readonly
+                            [(ngModel)] = "flightshcedule.id">
+                       </div>
+                    <div class="mb-3">
+                      <label for="flightRefId" class="form-label">flightRefId</label>
+                      <input type="number" class="form-control" id="flightRefId" name="flightRefId" 
+                          [(ngModel)] = "flightshcedule.flightRefId">
+                     </div>
+                 
+                    <div class="mb-3">
+                      <label for="departureDate" class="form-label">DepartureDate</label>
+                      <input type="number" class="form-control" id="departureDate" name="departureDate" 
+                          [(ngModel)] = "flightshcedule.departureDate">
+                     </div>
+                     <div class="mb-3">
+                        <label for="arrivalDate" class="form-label">ArrivalDate</label>
+                        <input type="number" class="form-control" id="arrivalDate" name="arrivalDate" 
+                            [(ngModel)] = "flightshcedule.arrivalDate">
+                       </div>
+                     
+                     <button type="submit" class="btn btn-primary mr-2">Save</button>
+                     <button type="button" class="btn btn-danger m-2" 
+                     (click)="DeleteFlightshedule(flightshcedule.id)">Delete</button>    
+                   </form>          
+            </div>
+            <div class="col-6 card-body border m-3">
+                <img class="w-100 h-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtoZu2E6m7BQToLCgQ91iUWI4fMUZITZj0tA&usqp=CAU">
+            </div>
+        </div>
+</div>
+ 
+
+ 

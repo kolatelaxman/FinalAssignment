@@ -1,0 +1,43 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center text-white bg-dark border">Add New Hotel</h1>
+    <hr>  
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="AddHotel()">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" name="name" 
+                          [(ngModel)] = "addhotelRequest.name">
+                     </div>
+                     <div class="mb-3">
+                        <label for="star" class="form-label">Star</label>
+                        <input type="number" class="form-control" id="star" name="star" 
+                          [(ngModel)] = "addhotelRequest.star" >
+                       </div> 
+                       <div class="mb-3">
+                        <label for="cityRefId" class="form-label">CityRefId</label>
+                        <input type="number" class="form-control" id="cityRefId" name="cityRefId" 
+                          [(ngModel)] = "addhotelRequest.cityRefId" >
+                       </div> 
+                       <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="text   " class="form-control" id="image" name="image" 
+                          [(ngModel)] = "addhotelRequest.image">
+                       </div>        
+                       <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" id="description" cols="50" rows="2" class="form-control" 
+                          [(ngModel)] = "addhotelRequest.description"></textarea>
+                        <!-- <input type="text" class="form-control" id="description" name="description" 
+                          [(ngModel)] = "addhotelRequest.description"> -->
+                       </div>             
+                     <button type="submit" class="btn btn-danger">Save</button>
+                     <button type="reset" class="btn btn-primary m-2"  value="Reset">Reset</button>
+                  </form>           
+            </div>
+            <div class="col-6">
+              <img class="w-100 h-100 card-body border m-3" src="https://www.prismetric.com/wp-content/uploads/2017/04/Demystify-your-marketing-strategy-the-Make-My-Trip-way-1.jpg" alt="">
+            </div>
+        </div>
+</div>
+ 

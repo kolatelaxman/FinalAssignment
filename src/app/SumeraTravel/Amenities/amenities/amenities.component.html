@@ -1,0 +1,29 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center bg-dark text-white">Amenities</h1>
+    <hr>
+   <a class="text-white btn btn-primary mb-2" [routerLink]="['/add-amenities']">Add Amenities</a> 
+   <hr> 
+    <table class="table m-2 border" *ngIf="amenities">
+       <thead>
+            <tr class="card-body border bg-info">
+               <th>Id</th>
+               <th>Name</th>             
+               <th>Description</th>
+               <th>Update</th>
+               <th>Delete</th>  
+             </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let amenitie of amenities">
+               <td>{{amenitie.id}}</td>
+               <td>{{amenitie.name}}</td> 
+               <td>{{amenitie.description}}</td>
+               <td><a [routerLink]="['/app','amenities', amenitie.id]" class="btn btn-primary">Edits</a></td>
+               <td><a [routerLink]="['/app','amenities', amenitie.id]" class="btn btn-danger">Delete</a></td>
+
+           </tr>
+       </tbody>                                                         
+    </table>
+    <p *ngIf="!amenities">No Countrys Found </p>
+</div>
+

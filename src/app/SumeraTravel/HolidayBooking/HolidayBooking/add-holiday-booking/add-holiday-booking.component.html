@@ -1,0 +1,83 @@
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav>   
+
+<div class="container my-5 border card card-body bg-light">
+    <h1 class="mb-3 text-center bg-dark border text-white">Add New HolidayBooking</h1>
+    <hr>
+        <div class="row">
+            <div class="col-5 card-body border m-2">
+                <form #form="ngForm" (ngSubmit)="AddHoliday()">
+                    <div class="mb-3">
+                      <label for="holidayPakageId" class="form-label">HolidayPakageId</label>
+                      <input type="number" class="form-control" id="holidayPakageId" name="holidayPakageId" 
+                          [(ngModel)] = "addHolidayBookingrequst.holidayPakageId">
+                     </div> 
+
+                     <div class="mb-3">
+                        <label for="userId" class="form-label">UserId</label>
+                        <input type="number" class="form-control" id="userId" name="userId" 
+                            [(ngModel)] = "addHolidayBookingrequst.userId">
+                       </div> 
+                       <div class="mb-3">
+                        <label for="bookingDate" class="form-label">BookingDate</label>
+                        <input type="text" class="form-control" id="bookingDate" name="bookingDate" 
+                            [(ngModel)] = "addHolidayBookingrequst.bookingDate">
+                       </div> 
+                             
+                     <button type="submit" class="btn btn-danger">Save</button>
+                     <button type="reset" class="btn btn-primary m-2"  value="Reset">Reset</button>
+                  </form>           
+            </div>
+            <div class="col-6">
+              <img class="w-100 h-100 card-body border" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGHPftJH7ap_LtlRYjo9XKKyZkWIX8wfbZOw&usqp=CAU" alt="">
+            </div>
+        </div>
+</div>
+<footer class=" text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4 text-white">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Footer text</h5>
+  
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Footer text</h5>
+  
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+ </div>

@@ -1,0 +1,46 @@
+<div class="container my-5 card-body border">
+    <h1 class="mb-3 text-center text-white bg-dark border">Add New Flight-Boking</h1>
+    <hr>  
+        <div class="row">
+            <div class="col-5 card-body border m-3">
+                <form #form="ngForm" (ngSubmit)="AddFlightbooking()">
+                    <div class="mb-3">
+                      <label for="userRefId" class="form-label">UserRefId</label>
+                      <input type="number" class="form-control" id="flightRefId" name="userRefId" 
+                          [(ngModel)] = "flightBooking.userRefId">
+                     </div>
+                     <div class="mb-3">
+                        <label for="bookingDate" class="form-label">BookingDate</label>
+                        <input type="text" class="form-control" id="bookingDate" name="bookingDate" 
+                            [(ngModel)] = "flightBooking.bookingDate">
+                    </div>
+                    <div class="mb-3">
+                        <label for="flightScheduleId" class="form-label">FlightScheduleId</label>
+                        <input type="number" class="form-control" id="flightScheduleId" name="flightScheduleId" 
+                            [(ngModel)] = "flightBooking.flightScheduleId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactNumber" class="form-label">ContactNumber</label>
+                        <input type="number" class="form-control" id="contactNumber" name="contactNumber" 
+                            [(ngModel)] = "flightBooking.contactNumber">
+                    </div>
+                    <div class="mb-3">
+                        <label for="numberOfTicket" class="form-label">NumberOfTicket</label>
+                        <input type="number" class="form-control" id="numberOfTicket" name="numberOfTicket" 
+                            [(ngModel)] = "flightBooking.numberOfTicket">
+                    </div>
+                    <div class="mb-3">
+                        <label for="totalAmount" class="form-label">TotalAmount</label>
+                        <input type="number" class="form-control" id="totalAmount" name="totalAmount" 
+                            [(ngModel)] ="flightBooking.totalAmount">
+                    </div>
+                     <button type="submit" class="btn btn-danger">Save</button>
+                     <button type="reset" class="btn btn-primary m-2"  value="Reset">Reset</button>
+                  </form>           
+            </div>
+            <div class="col-6">
+              <img class="w-100 h-100 card-body border m-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGjlKnsdE2dBAZAZjgIS2g6DnljLRhrxIAw&usqp=CAU    " alt="">
+            </div>
+        </div>
+</div>
+ 

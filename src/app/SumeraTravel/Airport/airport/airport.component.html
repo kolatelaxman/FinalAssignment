@@ -1,0 +1,39 @@
+<div class="container my-5 border card-body ">
+    <h1 class="mb-3 text-center bg-dark text-white">Airport</h1>
+    <hr>
+   <a class="text-white btn btn-primary m-2" [routerLink]="['/add-Airport']">Add Airport</a>  
+   
+   <hr>
+    <table class="table m-2 card-body border" *ngIf="airport">
+       <thead>
+            <tr class="bg-info">
+               <th>Id</th>
+               <th>ShortName</th>
+                <th>CityRefId</th>
+               <th>Pincode</th>
+               <th>Logo</th>
+               <th>Address1</th>
+                <th>telephone</th>
+                <th>Email2</th>
+                <th>Update</th>
+                <th>Delete</th>
+             </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let flights of airport">
+               <td>{{flights.id}}</td>
+               <td>{{flights. shortName}}</td>
+               <td>{{flights.cityRefId}}</td>
+               <td>{{flights.pincode}}</td>
+               <td>{{flights.logo}}</td>
+               <td>{{flights.address1}}</td>
+                <td>{{flights.telephone2}}</td>
+                <td>{{flights.email2}}</td>
+                <td><a [routerLink]="['/app','Airport', flights.id]" class="btn btn-primary">Edits</a></td>
+                <td><a [routerLink]="['/app','Airport', flights.id]" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </tbody>   
+    </table>
+    <p *ngIf="!airport">No Countrys Found </p>
+</div>
+

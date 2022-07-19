@@ -1,0 +1,76 @@
+<div class="bg-dark"> 
+    <nav class="navbar sticky-top navbar-dark bg-warning">
+       <div class="container-fluid">
+         <a class="navbar-brand mx-auto h1"><img  style="height:60px;" src="https://imgak.mmtcdn.com/pwa_v3/pwa_hotel_assets/header/mmtLogoWhite.png" alt=""></a>
+         <a  routerLink="/Admin" class="btn btn-dark btn-lg  m-3">
+           <span class="glyphicon glyphicon-log-out fa fa-sign-out"></span>
+       </a>
+       </div>                                          
+     </nav>  
+<div class="container my-5 border card card-body bg-light">
+    <h1 class="mb-3 text-center bg-dark text-white">HolidayPackagr</h1>
+    <hr> 
+  <div class="row"> 
+    <div class="col-sm-9"> 
+   <button style="width: 200px;" class="text-white btn btn-primary" [routerLink]="['/add-HolidayPackge']">Add HolidayPackagr</button></div>
+   <div class="col-sm-3"> 
+   <form class="d-flex" style="width:300px ;">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+  </div>
+
+
+   <hr>
+    <table class="table m-2 card-body border" *ngIf="HolidayPackagr">
+       <thead>
+            <tr class="bg-info">
+               <th>Id</th>
+               <th>fromLocationRefId</th>
+               <th>toLocationRefId</th>
+                <th>GuestNo</th>
+               <th>hotel_ref_id</th>
+               <th>holidaypackagePrice</th>
+               <th>Description</th>
+               <th>DateTime</th>
+               <th>Update</th>
+               <th>Delete</th>        
+                
+             </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let location of HolidayPackagr">
+               <td>{{location.holidaypackageId}}</td>
+               <td>{{location.from_locationRefId}}</td>
+               <td>{{location.to_locationRefId}}</td>
+                <td>{{location.guestNo}}</td>
+               <td>{{location.hotel_ref_id}}</td>
+
+                
+               <td>{{location.holidaypackagePrice}}</td>
+               <td>{{location.description}}</td>
+
+              
+               <td>{{location.dateTime | date}}</td>
+
+               <td><a [routerLink]="['/app','HolidayPackge', location.holidaypackageId]" class="btn btn-primary">Edits</a></td>
+               <td><a [routerLink]="['/app','HolidayPackge', location.holidaypackageId]" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </tbody>                                                         
+    </table>
+    <p *ngIf="!HolidayPackagr">No Countrys Found </p>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer class=" text-center text-lg-start">
+    
+  
+    <!-- Copyright -->
+    <div class="text-center text-white p-3 mt-5" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+     </div>
+    <!-- Copyright -->
+  </footer>
+ </div>

@@ -1,0 +1,26 @@
+<div class="container my-5 border card-body ">
+    <h1 class="mb-3 text-center bg-dark text-white">Travel</h1>
+    <hr>
+   <a class="text-white btn btn-primary m-2" [routerLink]="['/add-travel']">Add Travel</a>  
+   <hr>
+    <table class="table m-2 card-body border" *ngIf="Travel">
+       <thead>
+            <tr class="bg-info">
+               <th>Id</th>
+               <th>Name</th>
+               <th>Update</th>
+               <th>Delete</th>
+             </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let travel of Travel">
+               <td>{{travel.id}}</td>
+               <td>{{travel.name}}</td>       
+               <td><a [routerLink]="['/app','travel', travel.id]" class="btn btn-primary">Edits</a></td>
+               <td><a [routerLink]="['/app','travel', travel.id]" class="btn btn-danger">Delete</a></td>
+           </tr>
+       </tbody>                                                         
+    </table>
+    <p *ngIf="!Travel">No Countrys Found </p>
+</div>
+
